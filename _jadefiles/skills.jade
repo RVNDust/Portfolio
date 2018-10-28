@@ -1,0 +1,40 @@
+mixin skillElement(skillName, skillValue)
+  .skill
+    .name #{skillName}
+    .level
+      .beginner beginner
+      .medium medium
+      .advanced advanced
+    .gauge
+      .gauge-fill #{skillValue}
+      
+mixin personalityElement(skillName, skillValue)
+  .skill
+    .name #{skillName}
+    .level
+      .beginner low
+      .medium medium
+      .advanced high
+    .gauge
+      .gauge-fill #{skillValue}
+
+section.global-section#skills
+  .flex.flex--center
+    .col-2
+      .skills
+        h2.skill-header personalité
+          +personalityElement('Ouverture', '50')
+          +personalityElement('Conscienciosité', '75')
+          +personalityElement('Extraversion', '50')
+          +personalityElement('Agréabilité', '70')
+          +personalityElement('Neuroticisme', '25')
+        
+      .skills
+        h2.skill-header technique
+          +skillElement('C++', '75')
+          +skillElement('C#', '75')
+          +skillElement('Unity', '50')
+          +skillElement('Javascript', '60')
+          +skillElement('Java', '40')
+          +skillElement('Android', '30')
+          +skillElement('Jade/SASS', '40')

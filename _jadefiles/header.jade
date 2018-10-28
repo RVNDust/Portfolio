@@ -1,0 +1,19 @@
+mixin nav-content()
+  ul
+    li: a(onclick="navigationClick('about')") à propos
+    li: a(onclick="navigationClick('resume')") Experiences
+    li: a(onclick="navigationClick('skills')") Compétences
+    li: a(onclick="navigationClick('projects')") Projets
+    li: a(onclick="navigationClick('contact')") Contact
+
+.mobile-nav
+  +nav-content()
+header
+  h2.logo-yd Yvan Denais
+  
+  nav.site-nav
+    +nav-content()
+      
+  .language-toggle
+      
+  .mobile-nav-toggle(onclick="toggleNavigation()"): span

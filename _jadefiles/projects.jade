@@ -1,0 +1,38 @@
+mixin box(thumbnails, project_title, project_tech, project_desc)
+  li(style="background-image: url('#{thumbnails}');").box
+    .project-meta
+      .title #{project_title}
+      .technology #{project_tech}
+      .description #{project_desc}
+      
+mixin emptybox(thumbnails)
+  li(style="background-image: url('#{thumbnails}');").box-empty
+
+section#projects.global-section
+  section#projects-description
+    .flex.flex--center
+      .col-2
+        p Vous trouverez sur cette page un ensemble exhaustif des différents projets auxquels j'ai eu l'occasion de prendre part. L'essentiel des projets qui sont affichés ici sont des projets personnels. 
+        
+  section#projects-boxes
+    .flex.flex--center
+      .col-2
+        ul.boxes-wrap
+          //Ligne projects 1
+          +box("assets/img/thumb-scavengers.png", "Scavengers" ,"UNITY C#", "Second projet réalisé dans le cadre de la découverte d'Unity. J'ai suivi le tutoriel du RogueLike se trouvant sur le site d'unity3D pour en arriver à ce résultat. Ce tutoriel m'a permis d'apprendre des choses concernant la conception de jeux en 2D, ainsi que des notions sur les contrôles dans un jeu orienté mobile (Android, IOS)")
+          +emptybox("assets/img/graybox.png")
+          +box("assets/img/thumbnails-spacer2D.png", "Spacer2D", "UNITY C#", "Troisième projet réalisé dans la continuité de ma formation à l'utilisation d'Unity. Pour ce projet j'ai repris les principes vus dans le tutoriel du Spacer proposé par Unity, puis je les ai appliqués à ma propre version du jeu dans une version 2D. J'ai par la suite ajouté des éléments tels que : Menu principal, Page de score, Gestion de bonus, Score, Vie, etc...Cette réalisation m'a beaucoup apporté car elle m'a permis d'approfondir les éléments que m'ont apporté les tutoriels trouvés sur Unity tout en y intégrant des éléments personnels.")
+          +box("http://i.imgur.com/TqEnMfI.jpg", "Survival Shooter", "Unity C#", "Cinquième projet suivi dans le cadre de ma formation sur Unity. J'ai suivi ce tutoriel afin de partir avec les bases nécessaires ,concernant l'utilisation d'un outil proposé par Unity : les RayCast, pour mon dernier projet de groupe.")
+          //Ligne projects 2
+          +emptybox("assets/img/graybox.png")
+          +box("http://i.imgur.com/gi2xxVZ.png", "Here We Are Again", "Unity C#", "Il s'agit d'un projet que j'ai lancé avec un ami. Le but de ce projet est de construire un platformer 2D. Celui-ci sera constitué de niveaux rempli de pièges, le but étant de mettre en place un système de Die&Retry. On pensera notamment à Super Meat Boy comme inspiration. Ce projet est toujours en construction pour le moment, le travail effectué dessus consiste entre autre chose à travailler sur les pièges et leur déclenchements.")
+          +emptybox("assets/img/graybox.png")
+          +box("http://i.imgur.com/lXiNXbE.png", "Paper Schmup", "Unity C#", "Projet lancé entre deux tutoriels Unity. Il s'agit d'un tutoriel trouvé sur Internet qui proposé de construire un jeu de type Shoot'em up. Je m'y suis donc interessé pour en apprendre plus sur la construction de jeu de ce genre. Je ne l'ai pas terminé par manque de temps.")
+          //Ligne projects 3
+          +box("http://i.imgur.com/Pqn9di8.jpg", "Time Travel", "Unity C#", "Projet de groupe initié avec des amis suivant la même formation que moi. Nous cherchons tous les quatre à travailler dans le secteur du jeu vidéo. Nous nous sommes donc mis à travailler en collaboration sur un projet de jeu utilisant des sprites 2D dans un environnemnt 3D et reprenant les concepts de gameplay que nous aimons : RPG, Beat'em Up, Exploration. Le projet en est encore à ses débuts mais un lien sera disponible quand le projet sera arrivé à son terme.")
+          +box("assets/img/thumbnails-spacer.png", "Spacer", "Unity C#", "Premier projet réalisé dans le cadre de ma découverte d'Unity. Je me suis laissé guidé sur ce projet afin de comprendre le fonctionnement de l'éditeur, et celui de l'engine. J'ai rapidement terminé ce tutoriel et en ai conclu que je voulais en apprendre d'avantage sur les possibilités que celui-ci peut offrir.")
+          +box("http://i.imgur.com/siAwxcC.png", "Tanks!", "Unity C#", "Quatrième projet suivi dans le cadre de mon apprentissage de l'utilisation d'Unity. Ce projet est le premier que j'ai suivi me permettant d'aborder l'utilisation d'éléments 3D. J'ai donc pu voir comment utiliser les éléments de l'engine physic liés à la 3D.")
+          +emptybox("assets/img/graybox.png")
+
+        button(onclick="navigationClick('contact')").contact-link Like it ?
+        button(onclick="projectClose()").close-project Close Project

@@ -1,0 +1,105 @@
+section#projects
+
+  section#projects-description
+
+    p
+      margin: 40px 0
+
+  section#projects-boxes
+
+    ul
+      padding: 0
+
+    .col-2
+      width: 100%
+
+    .box
+      display: block
+      background:
+        size: cover
+        position: center
+      width: 25%
+      float: left
+      position: relative
+      overflow: hidden
+      cursor: pointer
+
+      &:after
+        content: ''
+        display: block
+        padding-top: 100%
+
+      .close-project
+        display: none
+
+    .box-empty
+      display: block
+      background:
+        size: cover
+        position: center
+      width: 25%
+      float: left
+      position: relative
+      overflow: hidden
+
+      &.not-displayable
+        display: none
+
+      &:after
+        content: ''
+        display: block
+        padding-top: 100%
+
+    .project-meta
+      position: absolute
+      top: 0
+      left: 0
+      bottom: 0
+      right: 0
+      background: fade-out($iceblue, 0.15)
+      color: $white
+      padding: 10px
+      transform: translate(0%, 100%)
+      transition: all 0.2s ease-in-out
+      opacity: 0
+
+      .title
+        font-size: 36px
+      .technology
+        font-size: 26px
+        font-style: italic
+      .description
+        font-size: 22px
+
+    .box.is-open-project
+      width: 100%
+      overflow: visible
+      cursor: auto
+
+      .project-meta
+        opacity: 1
+        transform: translate(0%, 0%)
+
+    .box.isnot-open-project
+      display: none !important
+
+    button
+      margin: 30px
+      border-color: #666
+      color: #666
+
+      &:hover
+        border-color: fade-out($iceblue, 0.15)
+        color: fade-out($iceblue, 0.15)
+
+      &.close-project
+          float: right
+          margin-right: 10px
+          display: none
+
+      &.contact-link
+          float: left
+          margin-left: 10px
+
+.displayable
+  display: block !important;

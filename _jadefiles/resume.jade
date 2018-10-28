@@ -1,0 +1,18 @@
+mixin timeline_block(title, content, date)
+  .cd-timeline-block
+    .cd-timeline-img.cd-movie
+    .cd-timeline-content
+      h2 #{title}
+      p #{content}
+      span.cd-date #{date}
+
+section.global-section#resume
+  .flex.flex--space-around
+    .col-3
+      section#cd-timeline
+        +timeline_block("Unity C# - LINEACT", "Travail de conception et de réalisation d'une application en réalité virtuelle. Réflexion sur des problématiques de conception depuis un environnement VR (édition de contenu depuis l'application).","Septembre 2017 à Décembre 2017")
+        +timeline_block("Sharepoint - Sanofi Pasteur", "Conception et réalisation de sites Sharepoint pour faciliter le partage de ressources et l'accès aux informations. Travail sur l'innovation avec la proposition et l'intégration de nouveaux outils.", "Janvier 2017 à Avril 2017")
+        +timeline_block("Développement Web - Altitude Infrastructure", "Conception d'outils pour permettre un traitement plus efficace du ticketing. Gestion complète de projet avec assistance de mon maitre de stage.", "Mai 2016 à Juillet 2016")
+        +timeline_block("Module RFID .NET - Logicom Informatique", "Développement et intégration de module permettant de scanner des puces RFID afin de valider des informations. Utilisation du langage C# dans une configuration suivant le modèle MVC.", "Décembre 2015 à Février 2016")
+        +timeline_block("Développement Logiciel - Logicom Informatique", "Développement d'une solution mobile de réalisation d'inventaire en utilisant les codes barres. Ajout de la prise en charge d'un nouvel appareil pour une des solutions mobiles proposées par Logicom Informatique", "Septembre 2015 à Novembre 2015")
+        

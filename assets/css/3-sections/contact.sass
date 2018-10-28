@@ -1,0 +1,48 @@
+section#contact
+  .contact-form
+    display: flex
+    flex-direction: column
+    justify-content: center
+    padding: 20px
+
+    .form-row
+      display: flex
+      flex-direction: row
+      justify-content: space-between
+      margin-bottom: 5px
+
+      label
+        width: 40%
+        text-transform: uppercase
+
+      input
+        width: 60%
+
+        .greyButton
+          color: #9f9f9f !important
+
+          &:hover
+            border-color: #9f9f9f !important
+
+        &.message
+          height: 10em
+
+      &:last-child
+        justify-content: center
+        margin-top: 20px
+
+  .social-nav
+    display: flex
+    flex-direction: row
+    justify-content: space-around
+    width: 100%
+
+    .social
+      width: 100px
+      height: 100px
+      background:
+        position: center
+        size: cover
+
+  hr
+    color: $slate

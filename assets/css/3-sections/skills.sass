@@ -1,0 +1,71 @@
+section#skills
+  .col-2
+    width: 100%
+
+  .skill-header
+    text-transform: uppercase
+    color: $slate
+    text-align: left
+    margin-left: 0
+    padding: 0
+
+  .skill
+    //width: 180%
+    margin-left: 0
+    margin-top: 35px
+    color: lighten($slate, 20%)
+
+    .name
+      font-size: 18px
+      font-style: italic
+      text-indent: -3em
+
+    .level
+      display: flex
+      flex-direction: row
+      justify-content: space-between
+      width: 70%
+      position: relative
+      bottom: 15px
+      margin: auto
+      text-transform: lowercase
+
+      .beginner,
+      .medium,
+      .advanced
+        font-size: 10px
+        transform: rotateZ(-35deg)
+        color: lighten($slate, 35%)
+
+    .gauge
+      height: 30px
+      width: 100%
+      background: $slate
+      border-radius: 5px
+      overflow: hidden
+
+      .gauge-fill
+        width: 50%
+        background: $lime
+        height: 100%
+        border-radius: 5px 0 0 5px
+        transition: all 0.5s ease-in-out
+        transform: translateX(-105%) skewX(15deg)
+
+        &.filled
+          transform: translateX(-1%) skewX(-15deg)
+
+@media (max-width: 1100px)
+  section#skills
+    .skill-header
+      margin: 50px 0
+    .skill
+      padding: 0 30px
+      .name
+        margin-top: 50px
+        position: relative
+        bottom: 30px
+        left: 50%
+
+      .gauge
+        width: 100%

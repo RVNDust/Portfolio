@@ -1,0 +1,59 @@
+section#about
+
+  section
+    height: 400px
+    padding: 50px 0
+
+  section#who
+    background:
+      image: url(../img/who-bg.png)
+      position: center center
+      size: cover
+
+
+    h2
+      color: $white
+      margin: 0
+      //padding: 20px 0
+    p
+      color: $gray
+
+  button
+    margin: 40px auto
+
+  section#what
+    background:
+      image: url(../img/what-bg.jpg)
+      position: bottom bottom
+      size: cover
+
+    h2
+      color: $black
+      margin: 0
+      //padding: 20px 0
+    p
+      color: $black
+
+    button
+      border-color: $black
+      color: $black
+
+      &:hover,
+      &:active,
+      &:focus
+        color: lighten($black, 80%)
+        border-color: lighten($black, 60%)
+        outline: 0
+
+  section#where
+    background:
+      image: url(../img/why-bg.jpg)
+      position: center center
+      size: cover
+
+    h2
+      color: $white
+      margin: 0
+      //padding: 20px 0
+    p
+      color: $white
